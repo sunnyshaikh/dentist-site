@@ -207,12 +207,20 @@ section {
   background: linear-gradient(133deg, var(--gradient1), var(--gradient2));
 }
 
-.services
-
 /* client section */
 .client .card {
-  border: 1px solid hsl(0, 0%, 65%) !important;
-  border-radius: 2rem;
+  max-width: 22rem;
+  margin: 0 auto;
+}
+
+.owl-nav {
+  margin-left: 48.5%;
+  /* transform: translateX(-50%); */
+}
+
+.owl-nav button {
+  font-size: 2.5rem !important;
+  margin: 0 0.25rem !important;
 }
 
 .card-img {

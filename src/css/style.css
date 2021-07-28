@@ -1,0 +1,290 @@
+/* initializing variables */
+:root {
+  --gradient1: #00063d;
+  --gradient2: #004e92;
+  --custom-blue: #030b52;
+}
+
+/* global styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--gradient2);
+  color: #fff;
+}
+
+/* default styling */
+body {
+  min-height: 100vh;
+  background: #fff;
+  font-size: 1.15rem;
+  overflow-x: hidden;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none !important;
+  color: inherit;
+  transition: 0.25s ease;
+}
+
+a:hover:not(.btn, .nav-link, .logo) {
+  opacity: 0.6;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+.logo,
+h1 {
+  font-weight: 700;
+}
+
+.logo {
+  font-size: 1.75rem;
+}
+
+.text-blue {
+  color: var(--custom-blue);
+}
+
+.btn {
+  border-radius: 30px;
+  transition: 0.25s ease;
+}
+
+.btn:hover {
+  box-shadow: 0 2px 10px rgba(0,0,0,.5);
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn-blue {
+  background: linear-gradient(133deg, var(--gradient1), var(--gradient2));
+}
+
+.badge-blue {
+  background: var(--custom-blue);
+  color: #fff;
+}
+
+section {
+  padding-top: 3rem;
+  padding-bottom: 6rem;
+}
+
+.card {
+  background: none !important;
+  border: 0 !important;
+}
+
+.card p {
+  font-size: 1rem;
+}
+
+.hamburger {
+  font-size: 2rem;
+  padding: 0 0.5rem;
+  background: none;
+  color: var(--custom-blue);
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+
+.hamburger:active {
+  transform: rotate(25deg);
+}
+
+/* header */
+.header {
+  position: relative;
+  padding: 1.5rem 4rem 3rem 4rem;
+  z-index: 99;
+}
+
+.header-contact a {
+  font-size: 1rem;
+}
+
+.nav-container {
+  background: linear-gradient(133deg, var(--gradient1), var(--gradient2));
+  position: absolute;
+  top: 72%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 4px;
+}
+
+.social-link{
+  margin: 0 .35rem;
+}
+
+.navbar {
+  border-radius: 4px;
+}
+
+.navbar .nav-link {
+  position: relative;
+  color: #fff;
+  font-weight: 700;
+  margin: 0 0.75rem;
+  font-size: 1.2rem;
+  padding: 1rem 0;
+}
+.navbar .nav-link::before {
+  position: absolute;
+  content: '';
+  bottom: 0%;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #fff;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform .5s ease;
+  border-radius: 20px 20px 0 0;
+}
+
+.navbar .nav-link:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+  opacity: 1;
+}
+
+/* hero section */
+.hero {
+  position: relative;
+  background-image: linear-gradient(rgba(0,0,0,.15), rgba(0,0,0,.15)), url(../images/hero-img.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 85vh;
+  overflow: hidden;
+}
+
+.hero-content {
+  position: absolute;
+  top: 20%;
+  right: 0.6rem;
+  background: rgba(255, 255, 255, .75);
+  width: 650px;
+  max-width: 95%;
+  border-radius: 6px;
+  padding: 3rem 2.5rem;
+  transform: translateY(100px);
+  opacity: 0;
+  animation: header-animation 0.75s 0.75s ease forwards;
+}
+
+@keyframes header-animation {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.hero-title {
+  font-size: 3rem;
+}
+
+/* services section */
+.services {
+  background: linear-gradient(133deg, var(--gradient1), var(--gradient2));
+}
+
+.services
+
+/* client section */
+.client .card {
+  border: 1px solid hsl(0, 0%, 65%) !important;
+  border-radius: 2rem;
+}
+
+.card-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+/* banner */
+.banner {
+  background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url(../images/banner.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* footer */
+.footer {
+  background: linear-gradient(133deg, var(--gradient1), var(--gradient2));
+}
+
+.footer-col li {
+  margin: 0.75rem 0;
+}
+
+.footer-col h4 {
+  margin-bottom: 1rem;
+}
+
+
+@media screen and (max-width: 850px) {
+  body {
+    font-size: 1rem;
+  }
+
+  .h1 {
+    font-size: 2.2rem !important;
+  }
+
+  h6 {
+    font-size: 1.25rem;
+  }
+
+  .display-3 {
+    font-size: 3.5rem !important;
+  }
+
+  .header {
+    padding: 1.5rem 1rem 3rem 1rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .header {
+    padding: 1.5rem 1rem 1.5rem 1rem;
+  }
+
+  .nav-container {
+    top: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: .5s ease;
+    box-shadow: 0 8px 16px rgba(0,0,0,.65);
+  }
+
+  .nav-container.active {
+    max-height: 300px;
+  }
+}

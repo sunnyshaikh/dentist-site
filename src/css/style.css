@@ -296,3 +296,10 @@ section {
     max-height: 300px;
   }
 }
+
+@media screen and (max-width: 340px) {
+  .hero-content {
+    top: 5%;
+    padding: 1rem;
+  }
+}
